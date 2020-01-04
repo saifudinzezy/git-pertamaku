@@ -52,5 +52,62 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    //bikin variabel
+                    int nilai1, nilai2, hasil;
+                    //mengambil nilai dari edittext
+                    nilai1 = Integer.parseInt(edt1.getText().toString());
+                    nilai2 = Integer.parseInt(edt2.getText().toString());
+
+                    hasil = nilai1 - nilai2;
+                    result.setText("Hasil : "+hasil);
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this, "Nilai yang anda masukan salah!", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        btnKali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    //bikin variabel
+                    int nilai1, nilai2, hasil;
+                    //mengambil nilai dari edittext
+                    nilai1 = Integer.parseInt(edt1.getText().toString());
+                    nilai2 = Integer.parseInt(edt2.getText().toString());
+
+                    hasil = nilai1 * nilai2;
+                    result.setText("Hasil : "+hasil);
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this, "Nilai yang anda masukan salah!", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        btnBagi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    //bikin variabel
+                    int nilai1, nilai2, hasil;
+                    //mengambil nilai dari edittext
+                    nilai1 = Integer.parseInt(edt1.getText().toString());
+                    nilai2 = Integer.parseInt(edt2.getText().toString());
+
+                    hasil = nilai1 / nilai2;
+                    result.setText("Hasil : "+hasil);
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this, "Nilai yang anda masukan salah!", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
     }
 }
